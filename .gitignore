@@ -6,4 +6,6 @@ CTestTestfile.cmake
 install_manifest.txt
 Makefile
 
+*.build
 *.out
+*.xcodeproj
