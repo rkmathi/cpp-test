@@ -1,19 +1,22 @@
 # cpp-test
 
-## Run
+## Open with Xcode
 ```
-$ cmake -G Xcode .
+$ cd /path/to/cpp-test
+$ mkdir -p build && cd build
+$ cmake -G Xcode ..
 $ open cpp-test.xcodeproj
 ```
 
 ## Clean project
 ```
-$ ./cmake_clean.sh
+$ cd /path/to/cpp-test
+$ rm -rf build/*
 ```
 
 ## Generate doxygen
 ```
+$ cd /path/to/cpp-test
 $ doxygen
-
 $ open html/index.html
 ```
