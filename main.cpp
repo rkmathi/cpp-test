@@ -1,6 +1,10 @@
 #include <iostream>
 
-// v ここからHeaderに書くべき
+//! NSというネームスペースです。
+/*!
+ * NSという名前はNameSpaceを略しただけです。
+ */
+namespace NS {
 //! Cというクラスです。
 /*!
  * ほげほげ
@@ -52,9 +56,7 @@ class C {
  private:
   int a;
 };
-// ^ ここまでHeaderに書くべき
 
-// v ここからCppに書くべき
 /*!
  * @brief intの引数を取ってaにセットするあれです。
  * @param a_ aにセットするアレ
@@ -67,7 +69,9 @@ void C::setA(int a_) { this->a = a_; }
  @return aの値です
  */
 int C::getA() { return this->a; }
-// ^ ここまでCppに書くべき
+}
+
+using NS::C;
 
 int main(int argc, char const *argv[]) {
   std::cout << "hello\n";
