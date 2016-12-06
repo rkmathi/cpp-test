@@ -10,3 +10,10 @@ $ open cpp-test.xcodeproj
 ```
 $ ./cmake_clean.sh
 ```
+
+## Generate doxygen
+```
+$ doxygen
+
+$ open html/index.html
+```
