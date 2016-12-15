@@ -1,17 +1,17 @@
 # cpp-test
 
-## Open with Xcode
+## Build with CMake and run
 ```
 $ cd /path/to/cpp-test
-$ mkdir -p build && cd build
-$ cmake -G Xcode ..
-$ open cpp-test.xcodeproj
+$ cmake . -Bbuild
+$ cmake --build build
+$ ./build/bin/main.out
 ```
 
 ## Clean project
 ```
 $ cd /path/to/cpp-test
-$ rm -rf build/*
+$ rm -rf build
 ```
 
 ## Generate doxygen
