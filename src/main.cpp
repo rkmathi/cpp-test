@@ -32,7 +32,7 @@ class C {
   { this->a = 1; }
   //! 引数つきコンストラクタ。
   C(int a_)
-  : kHoge(10)
+  : kHoge(a_ + 10)
   , kFuga(20)
   { this->a = 2; }
 
@@ -73,7 +73,7 @@ int C::getA() { return this->a; }
 
 using NS::C;
 
-int main(int argc, char const *argv[]) {
+int main() {
   std::cout << "hello\n";
   std::cout << "-----\n";
 
