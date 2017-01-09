@@ -1,79 +1,9 @@
-#include <iostream>
-
-//! NSというネームスペースです。
-/*!
- * NSという名前はNameSpaceを略しただけです。
- */
-namespace NS {
-//! Cというクラスです。
-/*!
- * ほげほげ
- * ふがふが
- */
-class C {
- public:
-  //! ほげ列挙体
-  enum class E {
-    eHoge,  //!< Hogeです。
-    eFuga,  //!< Fugaです。
-    ePiyo   //!< Piyoです。
-  };
-
-  //! ほげ定数
-  const int kHoge;
-  //! ふが定数
-  const int kFuga;
-
-  // constructor & destructor
-  //! コンストラクタ。
-  C()
-  : kHoge(1)
-  , kFuga(2)
-  { this->a = 1; }
-  //! 引数つきコンストラクタ。
-  C(int a_)
-  : kHoge(a_ + 10)
-  , kFuga(20)
-  { this->a = 2; }
-
-  //! コピーコンストラクタ (default)
-  C(const C&) = default;
-  //! 代入演算子 (default)
-  C& operator=(const C&) = default;
-
-  //! ムーブコンストラクタ (default)
-  C(C&&) = default;
-  //! ムーブ代入演算子 (default)
-  C& operator=(C&&) = default;
-
-  //! デストラクタ (default)
-  ~C() = default;
-
-  //! aをセットする関数。
-  void setA(int a_);
-  //! aをゲットする関数。
-  int getA();
- private:
-  int a;
-};
-
-/*!
- * @brief intの引数を取ってaにセットするあれです。
- * @param a_ aにセットするアレ
- * @return void
- */
-void C::setA(int a_) { this->a = a_; }
-
-/*!
- @brief aの値を取得するあれです。
- @return aの値です
- */
-int C::getA() { return this->a; }
-}
+#include "main.hpp"
+#include "c.hpp"
 
 using NS::C;
 
-int main() {
+void RunC() {
   std::cout << "hello\n";
   std::cout << "-----\n";
 
@@ -105,6 +35,9 @@ int main() {
   c4.setA(40);
   std::cout << "c4.getA() : " << c4.getA() << "\n";
   std::cout << "-----\n";
+}
 
+int main() {
+  //RunC();
   return 0;
 }
