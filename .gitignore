@@ -1,5 +1,7 @@
 /.idea
 /build
+/cpp-test.xcodeproj
+/cpp-test.build
 /html
 
 # Created by https://www.gitignore.io/api/c++,cmake
